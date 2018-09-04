@@ -1,0 +1,14 @@
+.tiles-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+ img.tile {
+    text-align: center;
+     width: 100%;
+
+ }
+  div.tile {
+    text-align: center;
+     width: 100%;
+ }

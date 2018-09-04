@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <link rel="Shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+    <title>dotSource Website Designing</title>
+</head>
+<body>
+
+<!-- Überschrift https://www.w3schools.com/bootstrap/bootstrap_typography.asp -->
+<div class="col-md-10 col-md-push-1 tiles-container">
+    <h1>dotSource Website Designing</h1>
+</div>
+
+<!-- Slider https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
+<div class="col-md-10 col-md-push-1 tiles-container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="Brorfelde_landscape_2.jpg">
+            </div>
+
+            <div class="item">
+                <img src="photo-182689.jpg">
+            </div>
+
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Formular https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
+<div class="col-md-6 col-md-push-3 tiles-container">
+    <h2>Wähle deinen Urlaub aus:</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="form-name">Name:</label>
+            <input type="text" class="form-control" id="form-name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="form-ziel">Urlaubsziel:</label>
+            <select class="form-control" id="form-ziel">
+                <option data-price="800">Badeurlaub in Südspanien</option>
+                <option data-price="500">Party auf Ibiza</option>
+                <option data-price="300">Wandern in den Alpen</option>
+                <option data-price="600">Roadtrip durch die schottischen Highlands</option>
+            </select>
+        </div>
+        <label>Zusatzleistungen:</label>
+        <div class="checkbox">
+            <label><input type="checkbox" data-price="120" id="form-wellness">Wellness-Paket</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" data-price="50" id="allInclusive">All Inclusive</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" data-price="15" id="wlan">High-Speed WLAN</label>
+        </div>
+
+        <div class="form-group">
+            <label for="form-personen">Anzahl Personen:</label>
+            <select class="form-control" id="form-personen">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+		<!-- https://www.w3schools.com/bootstrap/bootstrap_buttons.asp -->
+        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal"
+                onClick="calculate();">Berechnen
+        </button>
+    </form>
+</div>
+
+<!-- Kacheln https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp -->
+<div class="col-md-10 col-md-push-1 tiles-container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="tile img-circle" src="tierwelt.jpg">
+            <div class="tile h3">Tierwelt</div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <img class="tile img-circle" src="entspannung.jpg">
+            <div class="tile h3">Entspannung</div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <img class="tile img-circle" src="genuss.jpg">
+            <div class="tile h3">Genuss</div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Modal https://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Angebot</h4>
+            </div>
+            <div class="modal-body">
+                <div id="modal-name">Hallo ...</div>
+                <div id="modal-description">hier dein individuelles Angebot :</div>
+                <div id="modal-price">Preis:</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+
